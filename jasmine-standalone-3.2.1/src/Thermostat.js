@@ -5,11 +5,21 @@ function Thermostat() {
 
 Thermostat.prototype.up = function(number) {
   this.temperature += number;
-  if (this.temperature > 25) {
-    this.temperature = 25}
-  else {
-    return this.temperature
+  switch (this.mode) {
+    case 'on':
+      if (this.temperature > 25) {
+        this.temperature = 25}
+      else {
+        return this.temperature
+      }
+    case 'off':
+      if (this.temperature > 32) {
+        this.temperature = 32}
+      else {
+        return this.temperature
+      }
   };
+
 };
 
 Thermostat.prototype.down = function(number) {
