@@ -1,5 +1,6 @@
 function Thermostat() {
   this.temperature = 20;
+  this.mode = 'default'
 }
 
 Thermostat.prototype.up = function(number) {
