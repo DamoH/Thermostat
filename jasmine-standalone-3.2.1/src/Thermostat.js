@@ -39,7 +39,8 @@ Thermostat.prototype.reset = function () {
 Thermostat.prototype.switch = function() {
   if (this.temperature < 18) {
     this.usage = "low-usage"}
+  else if (this,this.temperature < 25) {
+    this.usage = "medium-usage"}
   else {
-    return this.usage = "medium-usage"
-  }
+    this.usage = "high-usage"}
 };

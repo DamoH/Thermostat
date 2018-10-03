@@ -44,11 +44,15 @@ describe ('Thermostat', function () {
   });
 
   it ('should return low usage if temperature is lower than 18 degrees', function () {
-    console.log(thermostat.usage)
     thermostat.down(4)
     thermostat.switch()
-    console.log(thermostat.usage)
     expect(thermostat.usage).toEqual("low-usage");
+  });
+
+  it ('if its anything higher than 25, its hot in here', function(){
+    thermostat.up(6)
+    thermostat.switch()
+    expect(thermostat.usage).toEqual("high-usage");
   });
 
 
