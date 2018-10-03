@@ -19,7 +19,6 @@ Thermostat.prototype.up = function(number) {
         return this.temperature
       }
   };
-
 };
 
 Thermostat.prototype.down = function(number) {
@@ -29,4 +28,9 @@ Thermostat.prototype.down = function(number) {
   else {
     return this.temperature
   };
+};
+
+
+Thermostat.prototype.reset = function () {
+  this.temperature = 20
 };

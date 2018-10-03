@@ -36,4 +36,12 @@ describe ('Thermostat', function () {
     thermostat.up(15)
     expect(thermostat.temperature).toEqual(32);
   });
+
+  it ('it has a reset button', function () {
+    thermostat.up(4)
+    thermostat.reset()
+    expect(thermostat.temperature).toEqual(20);
+  })
+
+
 });
