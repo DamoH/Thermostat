@@ -12,5 +12,16 @@ describe ('Thermostat', function () {
     thermostat.up(2)
     expect(thermostat.temperature).toEqual(22);
   });
+
+it ('has a decrease function', function () {
+  thermostat.down(4)
+  expect(thermostat.temperature).toEqual(16);
 });
 
+it ('has a minimum temperature of 10 degrees', function() {
+  thermostat.down(11)
+  expect(thermostat.temperature).toEqual(10);
+}
+)
+
+});
