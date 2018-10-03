@@ -1,6 +1,7 @@
 function Thermostat() {
   this.temperature = 20;
   this.mode = 'on'
+  this.usage = 'medium-usage'
 }
 
 Thermostat.prototype.up = function(number) {
@@ -33,4 +34,12 @@ Thermostat.prototype.down = function(number) {
 
 Thermostat.prototype.reset = function () {
   this.temperature = 20
+};
+
+Thermostat.prototype.switch = function() {
+  if (this.temperature < 18) {
+    this.usage = "low-usage"}
+  else {
+    return this.usage = "medium-usage"
+  }
 };

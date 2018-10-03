@@ -41,7 +41,16 @@ describe ('Thermostat', function () {
     thermostat.up(4)
     thermostat.reset()
     expect(thermostat.temperature).toEqual(20);
-  })
+  });
+
+  it ('should return low usage if temperature is lower than 18 degrees', function () {
+    console.log(thermostat.usage)
+    thermostat.down(4)
+    thermostat.switch()
+    console.log(thermostat.usage)
+    expect(thermostat.usage).toEqual("low-usage");
+  });
+
 
 
 });
