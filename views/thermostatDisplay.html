@@ -5,26 +5,26 @@
     <div>
         <h1>Thermostat Interface</h1>
         <h2>Current Temperature:</h2>
-        <h2 id="temp">20</h2>
+        <h2 id="temp">thermostat.temperature</h2>
         <br>
         <h2>Current Usage:</h2>
         <h2 id="usage">  </h2>
         <br>
         <h3>Increase Temperature</h3>
         <form id="up">
-            <input type="text" id="butt">
+            <input type="text" id="upButt">
             <input type='submit' value="Submit">
         </form>
         <br>
         <h3>Decrease Temperature</h3>
-        <form>
-            <input type="text">
+        <form id="down">
+            <input type="text" id="downButt">
             <input type='submit' value="Submit">
         </form>
         <br>
         <button id="powersave">Powersave</button>
-        <p>
-        
+        <p id="saver">
+            thermostat.mode
         </p>
         <br>
         <br>

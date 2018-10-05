@@ -39,4 +39,22 @@ Thermostat.prototype.switch = function() {
   else {
     this.usage = "high-usage"}
   return this.usage
+  
+};
+
+
+Thermostat.prototype.powersave = function () {
+  // switch (this.mode) {
+  //   case 'on':
+  //     this.mode = "off";
+  //   case 'off':
+  //     this.mode = "on";
+  // };
+  // return this.mode
+  if (this.mode === "on") {
+    this.mode = "off";
+  } 
+  else {
+    this.mode = "on";
+  }
 };
