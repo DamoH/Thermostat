@@ -5,7 +5,8 @@ function Thermostat() {
 }
 
 Thermostat.prototype.up = function(number) {
-  this.temperature += number;
+  var int = parseInt(number, 10);
+  this.temperature += int;
   switch (this.mode) {
     case 'on':
       if (this.temperature > 25) {

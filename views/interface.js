@@ -1,7 +1,3 @@
-// $(document).ready(function(){
-//     var thermostat = new Thermostat();
-// })
-
 $(document).ready(function() {
     var thermostat = new Thermostat();
     $('#temp').text(thermostat.temperature);
@@ -12,8 +8,10 @@ $(document).ready(function() {
 
     });
 
-    var input = $( "input:first" ).val();
-    $('#up').submit(function(event){
-        $('#temp').text(thermostat.up(input));
+    $('#up').submit(function(e) {
+    
+        e.preventDefault();
+        
+        $('#temp').text(thermostat.up($('#butt').val()));
     });
 });   
